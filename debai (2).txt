@@ -1,0 +1,7 @@
+Cho file log static.log Sử dụng các lệnh trong Linux, Bashell, AWK... để thực hiện các task vụ sau hiệu quả:
+1. Hiển thị thông tin  QuerySuccess, QueryFail, UpdateSuccess, UpdateFail, Avg Res Time, tps 
+2. Vừa hiển thị thông tin như câu 1, vừa thực hiện ghi kết quả đó ra file output.txt
+3. Hiển thị thời gian, tps cao nhất trong file log theo thứ tự giảm dần, giới hạn 10 mốc thời gian
+4. Hiển thị thời gian, tps cao nhất trong file log theo thứ tự tăng dần, giới hạn 10 mốc thời gian
+
+
