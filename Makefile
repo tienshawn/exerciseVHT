@@ -53,17 +53,16 @@ savetps:
 #ex3: time and tpsmax sorted decrease
 .PHONY: timeDecrease
 timeDecrease:
-	awk -F ' ' '{print $$1 " " $$2}' ./statistic.log | sort -k 2 -r | head -n 10
+	awk -F "[| ]" '{print $$1 " " $$2 " " $$61}' ./statistic.log | sort -k 2 -r | head -n 10
 
 .PHONY: tpsMaxDecrease
 tpsMaxDecrease:
-	awk -F '|' '/max/ {print $$20}' ./statistic.log | sort -k 2 -r | head -n 10
-
+	awk -F "[| ]" '{print $$1 " " $$2 " " $$61}' ./statistic.log | sort -k 3 -r | head -n 10
 #ex4: time and tpsmax sorted increase
 .PHONY: timeIncrease
 timeIncrease:
-	awk -F ' ' '{print $$1 " " $$2}' ./statistic.log | sort -k 2 | head -n 10
+	awk -F "[| ]" '{print $$1 " " $$2 " " $$61}' ./statistic.log | sort -k 2 | head -n 10
 
 .PHONY: tpsMaxIncrease
 tpsMaxIncrease:
-	awk -F '|' '/max/ {print $$20}' ./statistic.log | sort -k 2 | head -n 10
+	awk -F "[| ]" '{print $$1 " " $$2 " " $$61}' ./statistic.log | sort -k 3 | head -n 10
