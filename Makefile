@@ -19,7 +19,7 @@ logUpdateFail:
 
 .PHONY: logAvgResTime
 logAvgResTime:
-	awk '/Avg Res Time/ {split($$0,a,"|"); split(a[11],b,"\t"); print b[2]}' ./statistic.log
+	awk '/Avg Res Time/ {split($$0,a,"|"); split(a[11],b,"\t"); split(b[2],c," "); print c[4]}' ./statistic.log
 
 .PHONY: logtps
 logtps:
